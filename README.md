@@ -25,3 +25,16 @@ You should now be set up to create your generic CMakefile and start using OpenGL
 
 CMake template made for CLion and testable OpenGL file in repo.
 
+To add GLEW libraries (Reccomended) open terminal,
+
+Type:
+sudo apt-get install libglew-dev
+
+To add GLEW to your CMake file simply follow the same steps that can be seen for GLFW,
+
+Ie add:
+find_package (GLEW REQUIRED)
+
+include_directories(${GLEW_INCLUDE_DIRS})
+
+Then in the target libraries, include ${GLEW_LIBRARY}
